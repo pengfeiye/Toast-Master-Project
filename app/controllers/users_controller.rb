@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def index
     @new = New.all
+    @threew = Threew.all
   end
   def create
     if user_params[:password] != user_params[:confirm_password]

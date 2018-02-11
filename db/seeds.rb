@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Threew.destroy_all
+
+Threew.create([
+  {
+  title: "Who?",
+  details: "DETAILS HERE"
+  },
+  {
+    title: "What?",
+    details: "DETAILS HERE"
+  },
+  {
+    title: "Why?",
+    details: "DETAILS HERE"
+  },
+  {
+    title: "How?",
+    details: "DETAILS HERE"
+  },
+  ])

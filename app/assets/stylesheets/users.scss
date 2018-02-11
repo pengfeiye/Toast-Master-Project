@@ -30,7 +30,7 @@
 }
 
 #news_container{
-  max-height: 48vh;
+  max-height: 45vh;
   overflow-y: auto;
 }
 
@@ -58,4 +58,15 @@
   text-align: center;
   border: solid 2px black;
   min-width: 100%;
+  display: block;
+}
+
+.Threew{
+  min-height: 18vh;
+}
+
+.w_card{
+  min-height: 8vh;
+  max-height: 8vh;
+  overflow: hidden;
 }

@@ -33,14 +33,31 @@
             <div class="details_container" id="news-<%=news.id%>">
               <%=news.details%>
             </div>
-            <i class="fa btn fa-chevron-down" data-id="<%=news.id%>" aria-hidden="true"></i>
+            <i class="new-down fa btn fa-chevron-down" data-id="<%=news.id%>" aria-hidden="true"></i>
           <%end%>
         </div>
 
       </div>
     </div>
     <div class="col-sm-8">
-
+      <%@threew.order(created_at: :asc).each do |w|%>
+      <div class="Threew">
+        <%if current_user%>
+        <h1 class="section_title">
+          <%=w.title%>
+          <%=link_to edit_wh_path(w.id) do%>
+          <i class="fa fa-pencil-square-o float-right" aria-hidden="true"></i>
+          <%end%>
+        </h1>
+        <%else%>
+        <h1 class="section_title"><%=w.title%></h1>
+        <%end%>
+        <div class="w_card" id="3w-<%=w.id%>">
+          <%=w.details%>
+        </div>
+        <i class="3w fa btn fa-chevron-down" data-id="3w-<%=w.id%>" aria-hidden="true"></i>
+      </div>
+      <%end%>
     </div>
   </div>
 </div>

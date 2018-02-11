@@ -19,5 +19,9 @@ Rails.application.routes.draw do
   put '/news/update/:id', to: 'news#update', as: 'update_news'
   get '/new/news', to:'news#new', as: 'news_page'
   post '/new/create', to: 'news#create', as: 'create_news'
+
+  #ThreeW
+  get '/edit/wh/:id', to: 'threews#edit', as: 'edit_wh'
+  put '/update/wh/:id', to: 'threews#update', as: 'update_wh'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
