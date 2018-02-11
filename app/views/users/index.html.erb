@@ -5,21 +5,25 @@
       <div class="row" id="member_section">
         <div class="container">
           <%if current_user%>
-            <h1 class="text-center" id="logout">
+            <h2 class="text-center">Member Dashboard</h2>
+            <h3 class="text-center">
+              <%=link_to "Create News", news_page_path%>
+            </h3>
+            <h3 class="text-center" id="logout">
               <%= link_to "LogOut", logout_path, method: :delete%>
-            </h1>
+            </h3>
           <%else%>
           <%= render "/users/logForm" %>
           <%end%>
         </div>
       </div>
       <div class="row">
-        <h1>News</h1>
+          <h1 class="section_title">News</h1>
         <div class="container" id="news_container">
           <%@new.order(updated_at: :desc).each do |news|%>
             <%if current_user%>
             <h3><%= link_to news.title, news_path(news.id)%>
-              <%=link_to update_news_path(news.id) do%>
+              <%=link_to edit_news_path(news.id) do%>
               <i class="fa fa-pencil-square-o float-right" aria-hidden="true"></i>
               <%end%>
             </h3>
@@ -36,7 +40,7 @@
       </div>
     </div>
     <div class="col-sm-8">
-      djskldjaslkdjsal
+
     </div>
   </div>
 </div>

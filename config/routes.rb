@@ -15,7 +15,9 @@ Rails.application.routes.draw do
 
   #News
   get '/news/:id', to: 'news#show', as: 'news'
-  get '/news/update/:id', to: 'news#edit', as: 'update_news'
-  put '/news/update/:id', to: 'news#update'
+  get '/news/edit/:id', to: 'news#edit', as: 'edit_news'
+  put '/news/update/:id', to: 'news#update', as: 'update_news'
+  get '/new/news', to:'news#new', as: 'news_page'
+  post '/new/create', to: 'news#create', as: 'create_news'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

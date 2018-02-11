@@ -1,7 +1,22 @@
 class NewsController < ApplicationController
-  before_action :authentication, only: [:update, :edit, :destroy]
+  before_action :authentication, only: [:update, :edit, :new, :create, :destroy]
   def show
     @news = New.find(params[:id])
+  end
+
+  def new
+    @news = New.new
+  end
+
+  def create
+    @news = New.new(news_params)
+    if @news.save
+      flash[:update] = "#{@news.title} Has Been Created"
+      redirect_to root_path
+    else
+      flash[:failed] = "Failed to Create News"
+      redirect_to news_create_page
+    end
   end
 
   def edit

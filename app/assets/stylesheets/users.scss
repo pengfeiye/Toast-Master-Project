@@ -30,7 +30,7 @@
 }
 
 #news_container{
-  max-height: 40vh;
+  max-height: 48vh;
   overflow-y: auto;
 }
 
@@ -47,4 +47,15 @@
 .fa-chevron-up{
   display: block;
   text-align: center;
+}
+
+.form{
+  margin: 10vh 20vw auto 20vw;
+}
+
+.section_title{
+  margin-top: 1vh;
+  text-align: center;
+  border: solid 2px black;
+  min-width: 100%;
 }

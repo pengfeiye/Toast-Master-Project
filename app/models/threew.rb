@@ -1,0 +1,2 @@
+class Threew < ApplicationRecord
+end
