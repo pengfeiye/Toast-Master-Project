@@ -1,0 +1,9 @@
+<% flash.each do |name, msg| %>
+  <% if name == "success" %>
+    <p class="alert alert-success">
+  <% else %>
+    <p class="alert alert-danger">
+  <% end %>
+    <strong> <%= name.capitalize %>: <%= msg %> </strong>
+  </p>
+<% end %>

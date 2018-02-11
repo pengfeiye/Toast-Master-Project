@@ -1,0 +1,50 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#main_container{
+  margin-top: 2vh;
+}
+
+#main_title{
+  margin-bottom: 2vh;
+}
+
+#nav {
+  border-bottom: solid 15px lightgreen;
+  border-radius: 20px;
+}
+
+#member_section {
+  background-color: skyblue;
+}
+
+.member_border{
+  border-bottom: solid 3px lightgreen;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#card{
+  margin: 5%;
+}
+
+#news_container{
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.details_container{
+  max-height: 4vh;
+  overflow: hidden;
+}
+
+.fa-chevron-down{
+  display: block;
+  text-align: center;
+}
+
+.fa-chevron-up{
+  display: block;
+  text-align: center;
+}
