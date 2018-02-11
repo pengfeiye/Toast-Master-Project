@@ -17,7 +17,7 @@ module SessionsHelper
 
   def authentication
     if !current_user
-      flash[:error] = "Please Login!"
+      flash[:error] = "You are not authorized to the page"
       redirect_to root_path
     end
   end

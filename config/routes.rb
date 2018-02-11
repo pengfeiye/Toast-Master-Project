@@ -12,5 +12,10 @@ Rails.application.routes.draw do
   #user login
   post '/login', to: 'sessions#create', as:'login'
   delete '/logout', to: 'sessions#destroy', as: 'logout'
+
+  #News
+  get '/news/:id', to: 'news#show', as: 'news'
+  get '/news/update/:id', to: 'news#edit', as: 'update_news'
+  put '/news/update/:id', to: 'news#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

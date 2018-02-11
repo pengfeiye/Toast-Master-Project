@@ -22,6 +22,7 @@ $(document).on('turbolinks:load',function(){
       $(this).addClass("fa-chevron-down")
       $(`#news-${newsId}`).css({"overflow": "hidden", "max-height": "4vh"})
     }
+
   })
 
   }

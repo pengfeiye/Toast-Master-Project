@@ -25,6 +25,11 @@
           <li class="list-inline-item">
             <a class="nav-item nav-link" href="/education">Education</a>
           </li>
+          <%if current_user%>
+          <li class="list-inline-item">
+            <%= link_to "LogOut", logout_path, method: :delete, class:"nav-item nav-link"%>
+          </li>
+          <%end%>
         </ul>
     </div>
   </nav>

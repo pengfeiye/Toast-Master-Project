@@ -17,7 +17,15 @@
         <h1>News</h1>
         <div class="container" id="news_container">
           <%@new.order(updated_at: :desc).each do |news|%>
-            <h3><%=news.title%></h1>
+            <%if current_user%>
+            <h3><%= link_to news.title, news_path(news.id)%>
+              <%=link_to update_news_path(news.id) do%>
+              <i class="fa fa-pencil-square-o float-right" aria-hidden="true"></i>
+              <%end%>
+            </h3>
+            <%else%>
+            <h3><%= link_to news.title, news_path(news.id)%></h3>
+            <%end%>
             <div class="details_container" id="news-<%=news.id%>">
               <%=news.details%>
             </div>
