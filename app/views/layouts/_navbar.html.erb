@@ -1,12 +1,23 @@
+
 <div class="container-fluid" id="nav">
-  <nav class="navbar navbar-expand-lg navbar-light bg-faded">
-    <div class="navbar-toggler" id="hamburger">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
+  <h1 id="logo-container">
+    <img id="nav-logo" src='/Club 21.png' />
+  </h1>
+  <nav class=" navbar-expand-lg navbar-light bg-faded navi">
+    <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="nav navbar-nav col align-self-start">
+      <div class="col-sm-12">
+        <div class="row">
+          <a class="col-md-3 col-sm-12 nav-item nav-link" href="/">Home</a>
+          <a class="col-md-3 col-sm-12 nav-item nav-link left-link" href="/direction">Direction</a>
+          <a class="col-md-3 col-sm-12 nav-item nav-link right-link" href="/info">Info</a>
+          <a class="col-md-3 col-sm-12 nav-item nav-link " href="/education">Education</a>
+        </div>
+      </div>
+
+        <!-- <ul class="nav navbar-nav navi">
           <li class="list-inline-item">
             <a class="nav-item nav-link" href="/">Home</a>
           </li>
@@ -14,12 +25,7 @@
             <a class="nav-item nav-link" href="/direction">Direction</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav col align-self-center">
-          <li class="list-inline-item">
-            <img id="nav-logo" src='/Club 21.png' />
-          </li>
 
-        </ul>
         <ul class="nav navbar-nav navbar-right ml-auto navi">
           <li class="list-inline-item">
             <a class="nav-item nav-link" href="/info">Info</a>
@@ -27,12 +33,7 @@
           <li class="list-inline-item">
             <a class="nav-item nav-link" href="/education">Education</a>
           </li>
-          <%if current_user%>
-          <li class="list-inline-item">
-            <%= link_to "LogOut", logout_path, method: :delete, class:"nav-item nav-link"%>
-          </li>
-          <%end%>
-        </ul>
+        </ul> -->
     </div>
   </nav>
 </div>
