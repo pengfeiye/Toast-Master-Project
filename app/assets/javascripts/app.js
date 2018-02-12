@@ -43,5 +43,11 @@ $(document).on('turbolinks:load',function(){
 
   })
 
+  $("textarea").on("keydown",function(key){
+    if(key.keyCode===13){
+      $(this).val+="\n"
+    }
+  })
+
   }
 )

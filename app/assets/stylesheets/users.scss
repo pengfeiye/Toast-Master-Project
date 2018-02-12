@@ -1,28 +1,68 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  text-align: center;
+}
 
+nav{
+  text-align: left;
+  max-height: 100vh;
+}
+
+.nav-item{
+  font-weight: bold;
+}
+
+
+h1{
+  font-family: Arial;
+  font-weight: bold;
+}
 #main_container{
   margin-top: 2vh;
 }
 
+.collapse.show{
+  color: white;
+  background-color: white;
+  min-height: 20vh;
+  max-width: 15vw;
+  text-align: center;
+  border-radius: 20px;
+  border: solid 1px black;
+}
+
+#hamburger{
+  min-width: 100%;
+  border: none;
+}
+
 #main_title{
+  margin-top: 3vh;
   margin-bottom: 2vh;
 }
 
 #nav {
-  border-bottom: solid 15px lightgreen;
-  border-radius: 20px;
+  border-bottom: solid 3px #27a4a1;
+  height: 6vh;
+  margin-bottom: 2vh;
+  position: relative;
+  z-index: 100000000;
+}
+
+#navbarResponsive {
+  height: 8vh;
 }
 
 #member_section {
-  background-color: skyblue;
+  color:white;
+  background-color: #0e4d6c;
+  margin-bottom: 1vh
 }
 
 .member_border{
-  border-bottom: solid 3px lightgreen;
-  border-radius: 20px;
-  text-align: center;
+  border-bottom: solid 3px #27a4a1;
 }
 
 #card{
@@ -32,6 +72,7 @@
 #news_container{
   max-height: 45vh;
   overflow-y: auto;
+  text-align: left;
 }
 
 .details_container{
@@ -49,19 +90,21 @@
   text-align: center;
 }
 
+
 .form{
   margin: 10vh 20vw auto 20vw;
 }
 
 .section_title{
-  margin-top: 1vh;
   text-align: center;
-  border: solid 2px black;
+  background-color: #2b2b3a;
   min-width: 100%;
   display: block;
+  color: white;
 }
 
 .Threew{
+  margin: 0;
   min-height: 18vh;
 }
 
@@ -69,4 +112,29 @@
   min-height: 8vh;
   max-height: 8vh;
   overflow: hidden;
+}
+
+.white-pencil{
+  color:white
+}
+
+#nav-logo{
+  margin:auto;
+  display: block;
+  max-height: 10vh;
+  max-width: 10vw;
+}
+
+.navi {
+  vertical-align: top;
+  height: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  nav{
+    margin: 0 12vw 0 12vw;
+  }
+  .nav-item{
+    font-size: 3vh;
+  }
 }

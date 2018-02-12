@@ -1,16 +1,15 @@
 <div class="col-sm-10 offset-sm-1" id="main_container">
-  <h1 class="text-center" id="main_title">Toast Master Santa Monica Club 21</h1>
   <div class="row">
     <div class="col-sm-4">
       <div class="row" id="member_section">
         <div class="container">
           <%if current_user%>
-            <h2 class="text-center">Member Dashboard</h2>
+            <h2 class="text-center member_border">Member Dashboard</h2>
             <h3 class="text-center">
-              <%=link_to "Create News", news_page_path%>
+              <%=link_to "Create News", news_page_path, class:"white-pencil"%>
             </h3>
             <h3 class="text-center" id="logout">
-              <%= link_to "LogOut", logout_path, method: :delete%>
+              <%= link_to "LogOut", logout_path, class:"white-pencil", method: :delete%>
             </h3>
           <%else%>
           <%= render "/users/logForm" %>
@@ -45,15 +44,18 @@
         <%if current_user%>
         <h1 class="section_title">
           <%=w.title%>
-          <%=link_to edit_wh_path(w.id) do%>
-          <i class="fa fa-pencil-square-o float-right" aria-hidden="true"></i>
+          <%=link_to edit_wh_path(w.id), class:"white-pencil" do%>
+          <i class=" fa fa-pencil-square-o float-right" aria-hidden="true"></i>
           <%end%>
         </h1>
         <%else%>
         <h1 class="section_title"><%=w.title%></h1>
         <%end%>
         <div class="w_card" id="3w-<%=w.id%>">
-          <%=w.details%>
+          <%w.details.split("\n").each do |text|%>
+            <%=text%>
+            </br>
+          <%end%>
         </div>
         <i class="3w fa btn fa-chevron-down" data-id="3w-<%=w.id%>" aria-hidden="true"></i>
       </div>
