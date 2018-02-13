@@ -1,39 +1,53 @@
 
-<div class="container-fluid" id="nav">
+<div id="nav">
   <h1 id="logo-container">
     <img id="nav-logo" src='/Club 21.png' />
   </h1>
   <nav class=" navbar-expand-lg navbar-light bg-faded navi">
-    <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <div class="col-sm-12">
-        <div class="row">
-          <a class="col-md-3 col-sm-12 nav-item nav-link" href="/">Home</a>
-          <a class="col-md-3 col-sm-12 nav-item nav-link left-link" href="/direction">Direction</a>
-          <a class="col-md-3 col-sm-12 nav-item nav-link right-link" href="/info">Info</a>
-          <a class="col-md-3 col-sm-12 nav-item nav-link " href="/education">Education</a>
+
+      <div class="col-md-12">
+        <%if current_position === "home"%>
+        <div class="nav-align">
+          <a class="col-md-3 nav-item nav-link" id="current" href="/">Home</a>
+          <a class="col-md-3 nav-item nav-link" href="/direction">Direction</a>
+          <a class="col-md-3 nav-item nav-link" href="/info">Info</a>
+          <a class="col-md-3 nav-item nav-link" href="/education">Education</a>
         </div>
+        <%elsif current_position === "direction"%>
+        <div class="nav-align">
+          <a class="col-md-3 nav-item nav-link" href="/">Home</a>
+          <a class="col-md-3 nav-item nav-link" id="current" href="/direction">Direction</a>
+          <a class="col-md-3 nav-item nav-link" href="/info">Info</a>
+          <a class="col-md-3 nav-item nav-link" href="/education">Education</a>
+        </div>
+        <%elsif current_position === "info"%>
+        <div class="nav-align">
+          <a class="col-md-3 nav-item nav-link" href="/">Home</a>
+          <a class="col-md-3 nav-item nav-link" href="/direction">Direction</a>
+          <a class="col-md-3 nav-item nav-link" id="current" href="/info">Info</a>
+          <a class="col-md-3 nav-item nav-link" href="/education">Education</a>
+        </div>
+        <%elsif current_position === "education"%>
+        <div class="nav-align">
+          <a class="col-md-3 nav-item nav-link" href="/">Home</a>
+          <a class="col-md-3 nav-item nav-link" href="/direction">Direction</a>
+          <a class="col-md-3 nav-item nav-link" href="/info">Info</a>
+          <a class="col-md-3 nav-item nav-link" id="current" href="/education">Education</a>
+        </div>
+        <%else %>
+        <div class="nav-align">
+          <a class="col-md-3 nav-item nav-link" href="/">Home</a>
+          <a class="col-md-3 nav-item nav-link" href="/direction">Direction</a>
+          <a class="col-md-3 nav-item nav-link" href="/info">Info</a>
+          <a class="col-md-3 nav-item nav-link" href="/education">Education</a>
+        </div>
+        <%end%>
       </div>
 
-        <!-- <ul class="nav navbar-nav navi">
-          <li class="list-inline-item">
-            <a class="nav-item nav-link" href="/">Home</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="nav-item nav-link" href="/direction">Direction</a>
-          </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right ml-auto navi">
-          <li class="list-inline-item">
-            <a class="nav-item nav-link" href="/info">Info</a>
-          </li>
-          <li class="list-inline-item">
-            <a class="nav-item nav-link" href="/education">Education</a>
-          </li>
-        </ul> -->
     </div>
   </nav>
 </div>

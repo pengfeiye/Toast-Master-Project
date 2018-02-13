@@ -13,21 +13,5 @@ class SessionsController < ApplicationController
     end
   end
 
-  def destroy
-    logout
-    flash[:success] ="Successfully Logged Out"
-    redirect_to home_path
-  end
-
-  def direction
-    render "direction"
-  end
-
-  def info
-    render "info"
-  end
-
-  def education
-    render "education"
-  end
+  
 end

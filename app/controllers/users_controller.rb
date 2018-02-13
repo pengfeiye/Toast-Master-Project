@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   def index
     @new = New.all
     @threew = Threew.all
+    change_position("home")
   end
   def create
     if user_params[:password] != user_params[:confirm_password]
@@ -21,5 +22,25 @@ class UsersController < ApplicationController
         redirect_to home_path
       end
     end
+  end
+  def destroy
+    logout
+    flash[:success] ="Successfully Logged Out"
+    redirect_to home_path
+  end
+
+  def direction
+    change_position("direction")
+    render "direction"
+  end
+
+  def info
+    change_position("info")
+    render "info"
+  end
+
+  def education
+    change_position("education")
+    render "education"
   end
 end

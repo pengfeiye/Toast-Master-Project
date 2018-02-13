@@ -21,18 +21,19 @@
 
   <body>
     <%= render "/layouts/navbar" %>
+
+    <h1 class="text-center" id="main_title">Toast Master Santa Monica Club 21</h1>
     <% flash.each do |name, msg| %>
       <% if name == "update" %>
         <p class="alert alert-success">
-          strong><%= msg %></strong>
+          <strong><%= msg %></strong>
         </p>
       <% elsif name == "failed" %>
         <p class="alert alert-danger">
-          strong><%= msg %></strong>
+          <strong><%= msg %></strong>
         </p>
       <% end %>
     <% end %>
-    <h1 class="text-center" id="main_title">Toast Master Santa Monica Club 21</h1>
     <%= yield %>
   </body>
 </html>

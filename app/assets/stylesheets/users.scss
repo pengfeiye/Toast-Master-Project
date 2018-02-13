@@ -3,12 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
   text-align: center;
+  margin-top: -8px;
 }
 
 
 
 .nav-item{
   font-weight: bold;
+  color:white;
+  text-align: center;
+  margin: auto;
+  font-size: 2em;
 }
 
 
@@ -21,17 +26,14 @@ h1{
 }
 
 .collapse.show{
-  float: right;
-  color: white;
-  background-color: white;
-  min-height: 25em;
-  min-width: 15vw;
+  background-color:  #2b2b3a;
+  min-height: 100em;
+  min-width: 100%;
   text-align: center;
   border-radius: 20px;
   border: solid 1px black;
   position: absolute;
-  margin-top: 3em;
-  left:81%;
+
 }
 
 
@@ -42,7 +44,6 @@ h1{
 }
 
 #nav {
-
   border-bottom: solid 3px #27a4a1;
   height: 8vh;
   margin-bottom: 2vh;
@@ -125,6 +126,21 @@ h1{
   max-width: 11vw;
 }
 
+.navi{
+  height: 85%;
+  background-color: #2b2b3a;
+}
+
+.navbar-toggler{
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#current{
+  color:#f05833
+}
+
+
 
 
 
@@ -134,7 +150,7 @@ h1{
   }
   .navi {
     vertical-align: top;
-    height: 100%
+    height: 85%;
   }
   #logo-container{
     position: relative;
@@ -143,15 +159,17 @@ h1{
   }
   #navbarResponsive{
     vertical-align: top;
-    margin: 0 15vw 0 15vw;
   }
   .nav-item{
     font-size: 4vh;
+    color:white;
+    display: inline-block;
   }
 
 
 
-  .row{
-
+  .nav-align{
+    display: flex;
+    flex-wrap: wrap;
   }
 }

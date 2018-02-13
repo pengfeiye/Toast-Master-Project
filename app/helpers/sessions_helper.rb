@@ -25,4 +25,13 @@ module SessionsHelper
   def login_params
     params.require(:user).permit(:username, :password)
   end
+
+  def change_position(position)
+    @position = position
+  end
+
+  def current_position
+    @position ||= nil
+  end
+
 end
