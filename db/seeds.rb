@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Threew.destroy_all
+Direction.destroy_all
 
 Threew.create([
   {
@@ -25,4 +26,13 @@ Threew.create([
     title: "How?",
     details: "DETAILS HERE"
   },
+  ])
+
+Direction.create([
+  {
+    topic_date: "02/01/1994",
+    topic_theme: "ITS MY BIRTHDAY! REMEBER!!",
+    event_date: "01/01/2222",
+    event_detail: "Some day in the future!"
+  }
   ])

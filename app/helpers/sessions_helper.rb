@@ -9,7 +9,7 @@ module SessionsHelper
     session[:user_id] = "none"
     @current_user = false
     cookies.signed[:user_id] = nil
-   end
+  end
 
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])

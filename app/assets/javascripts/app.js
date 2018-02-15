@@ -49,6 +49,10 @@ $(document).on('turbolinks:load',function(){
     }
   })
 
+  $("#mapBtn").on("click",function(e){
+    window.open('https://www.google.com/maps/place/2222+Wilshire+Blvd,+Santa+Monica,+CA+90403/@34.0329687,-118.4822955,17z/data=!4m5!3m4!1s0x80c2bb4be0578851:0xb8affa937ed31fca!8m2!3d34.0330398!4d-118.4806969', '_blank')
+  })
+
 
   }
 )
