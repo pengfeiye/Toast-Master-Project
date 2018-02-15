@@ -34,6 +34,9 @@
         </p>
       <% end %>
     <% end %>
-    <%= yield %>
+    <div class="main_content">
+      <%= yield %>
+    </div>
+    <%= render "/layouts/footer" %>
   </body>
 </html>

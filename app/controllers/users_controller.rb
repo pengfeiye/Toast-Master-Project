@@ -29,10 +29,7 @@ class UsersController < ApplicationController
     redirect_to home_path
   end
 
-  def direction
-    change_position("direction")
-    render "direction"
-  end
+
 
   def info
     change_position("info")

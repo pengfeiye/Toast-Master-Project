@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   #user signup
   get '/', to: 'users#index', as: 'home'
   post '/signup', to: 'users#create', as: 'signup'
-  get '/direction', to: 'users#direction'
   get '/info', to: 'users#info'
   get '/education', to: 'users#education'
 
@@ -23,5 +22,9 @@ Rails.application.routes.draw do
   #ThreeW
   get '/edit/wh/:id', to: 'threews#edit', as: 'edit_wh'
   put '/update/wh/:id', to: 'threews#update', as: 'update_wh'
+
+  #Direction Page
+  get '/direction', to: 'directions#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
 end
